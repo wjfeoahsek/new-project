@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KakaoNavi Deeplink</title>
+</head>
+<body>
+    <!-- 버튼을 클릭하면 카카오내비를 열도록 하는 JavaScript 함수 -->
+    <button onclick="openKakaoNavi()">카카오내비 열기</button>
+
+    <script>
+        // 카카오내비를 열어주는 JavaScript 함수
+        function openKakaoNavi() {
+            // 카카오내비의 Deeplink URL을 호출
+            window.location.href = 'kakaonavi://';
+        }
+    </script>
+</body>
+</html>
