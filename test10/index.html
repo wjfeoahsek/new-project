@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>SleepDrive-Prevent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChUKfWWc2vL-iHTMTVAinm2p3ESeXZyiE&libraries=places"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
+  integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0" crossorigin="anonymous"></script>
+    <script>
+        Kakao.init('2c3c531a15ef6c83ac9e96b07e031b66');
+    </script>
+</head>
+<body>
+    <header>
+        <div>Sleep Drive</div>
+    </header>
+
+    <nav>
+        <button type="button" onclick="init()">PREVENT</button>
+        <button type="button" onclick="stopWebcams()">FINISH</button>
+    </nav>
+
+    <article>
+        <!--pose-->
+        <div><canvas id="canvas"></canvas></div>
+        <div id="label-container-1"></div>
+        <!--image-->
+        <!-- 이미지프로젝트 화면 출력시 다시 활성화 : <div id="webcam-container"></div> -->
+        <div id="label-container-2"></div>
+
+        <script src="script.js"></script>
+    </article>
+
+</body>
+</html>
